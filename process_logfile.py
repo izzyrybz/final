@@ -6,6 +6,9 @@ from pathlib import Path
 from datetime import datetime
 import copy
 from isodate import parse_datetime
+from rdflib import Graph
+from rdflib.plugins.stores.sparqlstore import SPARQLStore
+from rdflib.plugins.stores import sparqlstore
 
 
     ###################################### TO CREATE THE COMMITS FROM THE TXT ################################################################
@@ -50,10 +53,11 @@ def info_between_elements(lst, A, B):
     ############################################ PROCESS THE INFORMATION FROM THE LOGFILE ###################################3
 
 def process_logfile(path):
-    commit = {"commit_ref": "", "author": "", "date":"" ,"changed_files": [], "parents" :""}
+    commit = {"commit_ref": "", "author": "", "description": "" ,"date":"" ,"changed_files": [], "parents" :""}
     history = []
     date_format = "%a %b %d %H:%M:%S %Y %z"
     with open(path,'r') as f:
+        first_star=True
         
         for line in f:
             line = line.strip()
@@ -62,7 +66,7 @@ def process_logfile(path):
                 continue
             #print(line)
             for index, element in enumerate(line):
-                #print(index,element)
+                print(index,element)
                 if ('commit:' in element):
                     #print(element)
                     hash = element[element.index(":") + 1:]
@@ -72,6 +76,10 @@ def process_logfile(path):
                     #print("adding person",line[index+1])
                     name = element[element.index(":") + 1:].strip()
                     commit["author"] = name
+                if('Description:' in element): 
+                    #print("adding person",line[index+1])
+                    description = element[element.index(":") + 1:].strip()
+                    commit["description"] = description
 
                 if('Date:' in element):
                     date = element[element.index(":") + 1:]
@@ -103,8 +111,13 @@ def process_logfile(path):
                 if('*' in element):
                     #print("now we are saving and")
                     #print("this is a ",commit)
-                    history.append(commit)
-                    commit = copy.deepcopy(commit)
+                    if(first_star):
+                        first_star=False
+                        continue
+                    else:
+                        history.append(commit)
+                        commit = copy.deepcopy(commit)
+                        commit["changed_files"]=[]
                     
                
     #print(history)
@@ -112,7 +125,7 @@ def process_logfile(path):
         for commit in history:
             json.dump(commit, fp, indent=4)
             fp.write('\n')
-       
+    
 
     
     ############################################ TO CREATE THE RDF TRIPPLES #############################################
@@ -122,15 +135,16 @@ def process_logfile(path):
 
 
     Author = URIRef("http://dbpedia.org/ontology/author")
-    #Description = URIRef("http://dbpedia.org/ontology/description")
+    Description = URIRef("http://dbpedia.org/ontology/description")
     Calendar_date = URIRef("http://dbpedia.org/ontology/Calendar_date")
     Entity = URIRef("http://example.org/entity/")
 
     #I am not sure if these are correct but we are working with it
     Parent = URIRef("http://example.org/entity/parents")
-    Modify = URIRef("http://example.org/entity/modify")
-    Add = URIRef("http://example.org/entity/add")
-    Rename = URIRef("http://example.org/entity/rename")
+    Modify = URIRef("http://example.org/action/modify")
+    Delete = URIRef("http://example.org/action/delete")
+    Add = URIRef("http://example.org/action/add")
+    Rename = URIRef("http://example.org/action/rename")
 
     data=[]
     g = Graph()
@@ -141,21 +155,31 @@ def process_logfile(path):
         commit_uri = URIRef(urirefstring)
         g.add((commit_uri, RDF.type, commits))
         g.add((commit_uri, Author, Entity+commit['author']))
-        #only works when we print before??????
+        #g.add((commit_uri, Description, Literal(commit['description'])))
         print(commit['date'])
         g.add((commit_uri, Calendar_date, Literal(commit['date'], datatype=XSD.dateTime)))
         g.add((commit_uri, Parent,Entity+commit['parents'] ))
         #if it has been renamed, there is two files
-        '''for action,file,_ in commit["changed_files"]:
-            if (action == 'M'):
-                #print("Modify") 
-                g.add((commit_uri, Modify, Entity+file))
-            elif (action == 'A'):
-                #print("Modify") 
-                g.add((commit_uri, Add, Entity+file))
-            elif (action == 'R100'):
-                #print("Modify") 
-                g.add((commit_uri, Rename, Entity+file))'''
+        for array in commit["changed_files"]:
+            if len(array) == 2:
+                action=array[0]
+                file=array[1]
+                if (action == 'M'):
+                    #print("Modify") 
+                    g.add((commit_uri, Modify, Entity+file))
+                elif (action == 'A'):
+                    #print("Modify") 
+                    g.add((commit_uri, Add, Entity+file))
+                elif (action == 'D'):
+                    #print("Modify") 
+                    g.add((commit_uri, Delete, Entity+file))
+            if len(array) == 3:
+                action=array[0]
+                file1=array[1]
+                file2=array[1]
+                if (action == 'R100'):
+                    #print("Modify") 
+                    g.add((commit_uri, Rename, Entity+file1+'-to-'+file2))
             
 
 
@@ -164,8 +188,38 @@ def process_logfile(path):
 
 
 
-    ################################################## TRYING TO FIGURE OUT HOW TO USE SPARQL ###################################3
+    ################################################## PUT THE GRAPH INTO JENA ###################################3
 
+    return
+    
+    #okay cannot get this to work. moving on
+    '''store = sparqlstore.SPARQLUpdateStore(endpoint_uri='http://localhost:3030/test2/update')
+    g = Graph(store=store)
+    print(g)
+    g.parse("commit_history_turtle.ttl", format="turtle")
+
+    store = SPARQLStore('http://localhost:3030/test2/update')
+    g = Graph(store=store)
+    g.parse('commit_history_turtle.ttl', format="ttl")'''
+
+    '''
+    # Set up the TDB dataset
+    dataset_dir = "/path/to/my_dataset"
+    tdb_dataset = TDB.factory.create_dataset(dataset_dir)
+
+    # Load the TTL file into a Jena model
+    model = ModelFactory.create_default_model()
+    ttl_file = "/path/to/my_ttl_file.ttl"
+    model.read(ttl_file, format="ttl")
+
+    # Add the model to the TDB dataset
+    with tdb_dataset.begin(write=True) as tdb_txn:
+        tdb_txn.add(model)
+
+    # Close the TDB dataset
+    tdb_dataset.close()
+    
+    
     query = """
     SELECT ?subject ?predicate ?object
     WHERE {
@@ -182,7 +236,7 @@ def process_logfile(path):
         
         # Process the results
     else:
-        print("Query failed with status code", response.status_code)
+        print("Query failed with status code", response.status_code)'''
 
         
         

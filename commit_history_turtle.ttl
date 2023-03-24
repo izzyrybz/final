@@ -1,149 +1,460 @@
-@prefix ns1: <http://dbpedia.org/ontology/> .
-@prefix ns2: <http://example.org/entity/> .
+@prefix ns1: <http://example.org/action/> .
+@prefix ns2: <http://dbpedia.org/ontology/> .
+@prefix ns3: <http://example.org/entity/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://example.org/> a ns2:commit ;
-    ns1:Calendar_date ""^^xsd:dateTime ;
-    ns1:author ns2: ;
-    ns2:parents ns2: .
+<http://example.org/003757c6423a66b7aabc5601e9d32f910a9ae9cc> a ns3:commit ;
+    ns2:Calendar_date "2023-03-14T13:35:44+01:00"^^xsd:dateTime ;
+    ns2:author ns3:izzyrybz ;
+    ns1:modify ns3:killme.py ;
+    ns3:parents ns3:4f1dc63 .
 
-<http://example.org/003757c6423a66b7aabc5601e9d32f910a9ae9cc> a ns2:commit ;
-    ns1:Calendar_date "2023-03-14T13:35:44+01:00"^^xsd:dateTime ;
-    ns1:author ns2:izzyrybz ;
-    ns2:parents ns2:4f1dc63 .
+<http://example.org/0c3b4d81a5b086ddbb2c400ef14966125b9d3430> a ns3:commit ;
+    ns2:Calendar_date "2023-02-21T11:25:18+01:00"^^xsd:dateTime ;
+    ns2:author ns3:izzyrybz ;
+    ns1:modify ns3:myphrasemapping.py ;
+    ns3:parents ns3:3da3684 .
 
-<http://example.org/0c3b4d81a5b086ddbb2c400ef14966125b9d3430> a ns2:commit ;
-    ns1:Calendar_date "2023-02-21T11:25:18+01:00"^^xsd:dateTime ;
-    ns1:author ns2:izzyrybz ;
-    ns2:parents ns2:3da3684 .
+<http://example.org/0c8471e02d824de8485e1abcfcd00c5b20ae995e> a ns3:commit ;
+    ns2:Calendar_date "2023-03-06T11:51:35+01:00"^^xsd:dateTime ;
+    ns2:author ns3:izzyrybz ;
+    ns1:modify <http://example.org/entity/__pycache__/killme.cpython-310.pyc>,
+        <http://example.org/entity/common/graph/__pycache__/graph.cpython-310.pyc>,
+        <http://example.org/entity/common/graph/graph.py>,
+        <http://example.org/entity/common/query/__pycache__/querybuilder.cpython-310.pyc>,
+        <http://example.org/entity/common/query/querybuilder.py>,
+        <http://example.org/entity/json_files/phrasemapping.json>,
+        ns3:killme.py,
+        <http://example.org/entity/learning/treelstm/__pycache__/dataset.cpython-310.pyc>,
+        <http://example.org/entity/learning/treelstm/__pycache__/model.cpython-310.pyc>,
+        <http://example.org/entity/learning/treelstm/__pycache__/preprocess_lcquad.cpython-310.pyc>,
+        <http://example.org/entity/learning/treelstm/__pycache__/trainer.cpython-310.pyc>,
+        <http://example.org/entity/learning/treelstm/__pycache__/tree.cpython-310.pyc>,
+        <http://example.org/entity/learning/treelstm/__pycache__/utils.cpython-310.pyc>,
+        <http://example.org/entity/learning/treelstm/preprocess_lcquad.py>,
+        <http://example.org/entity/learning/treelstm/trainer.py>,
+        ns3:ownbuild.py,
+        <http://example.org/entity/parser/__pycache__/answerparser.cpython-310.pyc>,
+        <http://example.org/entity/parser/answerparser.py> ;
+    ns3:parents ns3:4048394 .
 
-<http://example.org/0c8471e02d824de8485e1abcfcd00c5b20ae995e> a ns2:commit ;
-    ns1:Calendar_date "2023-03-06T11:51:35+01:00"^^xsd:dateTime ;
-    ns1:author ns2:izzyrybz ;
-    ns2:parents ns2:4048394 .
+<http://example.org/163452bef637039fd49cdbbea22983b7669db5b3> a ns3:commit ;
+    ns2:Calendar_date "2023-02-12T15:28:51+01:00"^^xsd:dateTime ;
+    ns2:author ns3:izzyrybz ;
+    ns3:parents ns3:afc487f .
 
-<http://example.org/163452bef637039fd49cdbbea22983b7669db5b3> a ns2:commit ;
-    ns1:Calendar_date "2023-02-12T15:28:51+01:00"^^xsd:dateTime ;
-    ns1:author ns2:izzyrybz ;
-    ns2:parents ns2:afc487f .
+<http://example.org/28d73295e092c618c2a3a42c8e801d9b72faee1f> a ns3:commit ;
+    ns2:Calendar_date "2023-02-17T09:05:40+01:00"^^xsd:dateTime ;
+    ns2:author ns3:izzyrybz ;
+    ns1:modify <http://example.org/entity/__pycache__/myclassifier.cpython-310.pyc>,
+        <http://example.org/entity/__pycache__/myphrasemapping.cpython-310.pyc>,
+        ns3:myclassifier.py,
+        ns3:myphrasemapping.py,
+        ns3:ownbuild.py,
+        <http://example.org/entity/rdf_generator/main.py>,
+        <http://example.org/entity/turtle/dbpedia_3Eng_property.ttl>,
+        <http://example.org/entity/turtle/needed_information.ttl> ;
+    ns3:parents ns3:42b00da .
 
-<http://example.org/28d73295e092c618c2a3a42c8e801d9b72faee1f> a ns2:commit ;
-    ns1:Calendar_date "2023-02-17T09:05:40+01:00"^^xsd:dateTime ;
-    ns1:author ns2:izzyrybz ;
-    ns2:parents ns2:42b00da .
+<http://example.org/2b0fca49cf86f519c9afb0d2de95a66c46750683> a ns3:commit ;
+    ns2:Calendar_date "2023-03-21T13:48:34+01:00"^^xsd:dateTime ;
+    ns2:author ns3:izzyrybz ;
+    ns1:modify <http://example.org/entity/__pycache__/killme.cpython-310.pyc>,
+        <http://example.org/entity/__pycache__/myphrasemapping.cpython-310.pyc>,
+        <http://example.org/entity/common/graph/__pycache__/graph.cpython-310.pyc>,
+        <http://example.org/entity/common/graph/graph.py>,
+        <http://example.org/entity/json_files/dep_tree_cache_lcquadtest.json>,
+        <http://example.org/entity/json_files/phrasemapping.json>,
+        ns3:killme.py,
+        <http://example.org/entity/learning/treelstm/__pycache__/preprocess_lcquad.cpython-310.pyc>,
+        <http://example.org/entity/learning/treelstm/preprocess_lcquad.py>,
+        ns3:myphrasemapping.py,
+        <http://example.org/entity/output/tmp/a.len>,
+        <http://example.org/entity/output/tmp/a.parents>,
+        <http://example.org/entity/output/tmp/a.pos>,
+        <http://example.org/entity/output/tmp/a.rels>,
+        <http://example.org/entity/output/tmp/a.tag>,
+        <http://example.org/entity/output/tmp/a.toks>,
+        <http://example.org/entity/output/tmp/a.txt>,
+        <http://example.org/entity/output/tmp/b.parents>,
+        <http://example.org/entity/output/tmp/b.toks>,
+        <http://example.org/entity/output/tmp/b.txt>,
+        <http://example.org/entity/output/tmp/id.txt>,
+        <http://example.org/entity/output/tmp/sim.txt>,
+        ns3:ownbuild.py,
+        <http://example.org/entity/textfiles/possible_queries.txt>,
+        ns3:trash.txt ;
+    ns3:parents ns3:bf06282 .
 
-<http://example.org/2b0fca49cf86f519c9afb0d2de95a66c46750683> a ns2:commit ;
-    ns1:Calendar_date "2023-03-21T13:48:34+01:00"^^xsd:dateTime ;
-    ns1:author ns2:izzyrybz ;
-    ns2:parents ns2:bf06282 .
+<http://example.org/3da3684d813248a361780e1ecb38506a88ca0b76> a ns3:commit ;
+    ns2:Calendar_date "2023-02-20T15:23:06+01:00"^^xsd:dateTime ;
+    ns2:author ns3:izzyrybz ;
+    ns1:delete ns3:trail.py ;
+    ns1:modify <http://example.org/entity/__pycache__/myclassifier.cpython-310.pyc>,
+        <http://example.org/entity/__pycache__/myphrasemapping.cpython-310.pyc>,
+        <http://example.org/entity/json_files/phrasemapping.json>,
+        ns3:myclassifier.py,
+        ns3:myphrasemapping.py,
+        ns3:ownbuild.py,
+        ns3:trash.py,
+        <http://example.org/entity/turtle/dbpedia_3Eng_property.ttl> ;
+    ns3:parents ns3:d99c03f .
 
-<http://example.org/3da3684d813248a361780e1ecb38506a88ca0b76> a ns2:commit ;
-    ns1:Calendar_date "2023-02-20T15:23:06+01:00"^^xsd:dateTime ;
-    ns1:author ns2:izzyrybz ;
-    ns2:parents ns2:d99c03f .
+<http://example.org/404839419224303b291e222bf0cc4aa7de8e2378> a ns3:commit ;
+    ns2:Calendar_date "2023-03-05T10:42:57+01:00"^^xsd:dateTime ;
+    ns2:author ns3:izzyrybz ;
+    ns1:modify <http://example.org/entity/__pycache__/killme.cpython-310.pyc>,
+        <http://example.org/entity/common/container/__pycache__/linkeditem.cpython-310.pyc>,
+        <http://example.org/entity/common/container/linkeditem.py>,
+        <http://example.org/entity/common/graph/__pycache__/edge.cpython-310.pyc>,
+        <http://example.org/entity/common/graph/__pycache__/graph.cpython-310.pyc>,
+        <http://example.org/entity/common/graph/__pycache__/paths.cpython-310.pyc>,
+        <http://example.org/entity/common/graph/edge.py>,
+        <http://example.org/entity/common/graph/graph.py>,
+        <http://example.org/entity/common/graph/paths.py>,
+        <http://example.org/entity/common/query/__pycache__/querybuilder.cpython-310.pyc>,
+        <http://example.org/entity/common/query/querybuilder.py>,
+        <http://example.org/entity/json_files/phrasemapping.json>,
+        ns3:killme.py,
+        <http://example.org/entity/learning/treelstm/__pycache__/Constants.cpython-310.pyc>,
+        <http://example.org/entity/learning/treelstm/__pycache__/__init__.cpython-310.pyc>,
+        <http://example.org/entity/learning/treelstm/__pycache__/vocab.cpython-310.pyc>,
+        ns3:ownbuild.py,
+        <http://example.org/entity/parser/__pycache__/lc_quad.cpython-310.pyc>,
+        <http://example.org/entity/parser/lc_quad.py>,
+        <http://example.org/entity/rdf_generator/main.py>,
+        <http://example.org/entity/textfiles/possible_queries.txt>,
+        <http://example.org/entity/textfiles/working_queries.txt>,
+        <http://example.org/entity/turtle/dbpedia_3Eng_property.ttl> ;
+    ns1:rename ns3:allcombo.txt-to-allcombo.txt ;
+    ns3:parents ns3:66088ec .
 
-<http://example.org/404839419224303b291e222bf0cc4aa7de8e2378> a ns2:commit ;
-    ns1:Calendar_date "2023-03-05T10:42:57+01:00"^^xsd:dateTime ;
-    ns1:author ns2:izzyrybz ;
-    ns2:parents ns2:66088ec .
+<http://example.org/42b00da333db369a1e48f9a38e4f54502b9e53b2> a ns3:commit ;
+    ns2:Calendar_date "2023-02-13T15:50:35+01:00"^^xsd:dateTime ;
+    ns2:author ns3:izzyrybz ;
+    ns1:modify <http://example.org/entity/__pycache__/myclassifier.cpython-310.pyc>,
+        ns3:myclassifier.py,
+        ns3:ownbuild.py,
+        <http://example.org/entity/rdf_generator/main.py> ;
+    ns1:rename ns3:data.json-to-data.json,
+        ns3:gold_standard_git.json-to-gold_standard_git.json,
+        ns3:linked_answer.json-to-linked_answer.json ;
+    ns3:parents ns3:df640ae .
 
-<http://example.org/42b00da333db369a1e48f9a38e4f54502b9e53b2> a ns2:commit ;
-    ns1:Calendar_date "2023-02-13T15:50:35+01:00"^^xsd:dateTime ;
-    ns1:author ns2:izzyrybz ;
-    ns2:parents ns2:df640ae .
+<http://example.org/44f0fc33858d49cc7f8fa6e759eb91878c46f633> a ns3:commit ;
+    ns2:Calendar_date "2023-02-22T09:11:45+01:00"^^xsd:dateTime ;
+    ns2:author ns3:izzyrybz ;
+    ns1:modify ns3:test_q_generator.py ;
+    ns3:parents ns3:9b641f0 .
 
-<http://example.org/44f0fc33858d49cc7f8fa6e759eb91878c46f633> a ns2:commit ;
-    ns1:Calendar_date "2023-02-22T09:11:45+01:00"^^xsd:dateTime ;
-    ns1:author ns2:izzyrybz ;
-    ns2:parents ns2:9b641f0 .
+<http://example.org/4f1dc6391ca55ea2d1872989ff436e02a0598bdc> a ns3:commit ;
+    ns2:Calendar_date "2023-03-14T13:17:50+01:00"^^xsd:dateTime ;
+    ns2:author ns3:izzyrybz ;
+    ns1:modify <http://example.org/entity/learning/treelstm/trainer.py> ;
+    ns3:parents ns3:0c8471e .
 
-<http://example.org/4f1dc6391ca55ea2d1872989ff436e02a0598bdc> a ns2:commit ;
-    ns1:Calendar_date "2023-03-14T13:17:50+01:00"^^xsd:dateTime ;
-    ns1:author ns2:izzyrybz ;
-    ns2:parents ns2:0c8471e .
+<http://example.org/5ee2e36a37b77318d2580550a686bfbf841f49a6> a ns3:commit ;
+    ns2:Calendar_date "2023-03-20T10:23:08+01:00"^^xsd:dateTime ;
+    ns2:author ns3:izzyrybz ;
+    ns1:delete <http://example.org/entity/learning/treelstm/checkpoints/lc_quad.log> ;
+    ns1:modify <http://example.org/entity/learning/treelstm/data/lc_quad/LCQuad_test.json>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/LCQuad_train.json>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/LCQuad_trial.json>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/dataset.vocab>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/dataset_dev.pth>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/dataset_embed.pth>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/dataset_test.pth>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/dataset_train.pth>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/dev/a.len>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/dev/a.parents>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/dev/a.pos>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/dev/a.rels>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/dev/a.tag>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/dev/a.toks>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/dev/a.txt>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/dev/b.parents>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/dev/b.toks>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/dev/b.txt>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/dev/id.txt>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/dev/sim.txt>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/test/a.len>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/test/a.parents>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/test/a.pos>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/test/a.rels>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/test/a.tag>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/test/a.toks>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/test/a.txt>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/test/b.parents>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/test/b.toks>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/test/b.txt>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/test/id.txt>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/test/sim.txt>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/train/a.len>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/train/a.parents>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/train/a.pos>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/train/a.rels>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/train/a.tag>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/train/a.toks>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/train/a.txt>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/train/b.parents>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/train/b.toks>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/train/b.txt>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/train/id.txt>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/train/sim.txt>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/vocab-cased.txt>,
+        <http://example.org/entity/learning/treelstm/data/lc_quad/vocab.txt> ;
+    ns3:parents ns3:deb7f48 .
 
-<http://example.org/5ee2e36a37b77318d2580550a686bfbf841f49a6> a ns2:commit ;
-    ns1:Calendar_date "2023-03-20T10:23:08+01:00"^^xsd:dateTime ;
-    ns1:author ns2:izzyrybz ;
-    ns2:parents ns2:deb7f48 .
+<http://example.org/66088ec6289389cdda9be251f696f8afc6375807> a ns3:commit ;
+    ns2:Calendar_date "2023-03-02T10:25:22+01:00"^^xsd:dateTime ;
+    ns2:author ns3:izzyrybz ;
+    ns1:modify <http://example.org/entity/common/graph/__pycache__/graph.cpython-310.pyc>,
+        <http://example.org/entity/common/graph/graph.py>,
+        <http://example.org/entity/json_files/phrasemapping.json>,
+        ns3:ownbuild.py ;
+    ns3:parents ns3:beab74b .
 
-<http://example.org/66088ec6289389cdda9be251f696f8afc6375807> a ns2:commit ;
-    ns1:Calendar_date "2023-03-02T10:25:22+01:00"^^xsd:dateTime ;
-    ns1:author ns2:izzyrybz ;
-    ns2:parents ns2:beab74b .
+<http://example.org/77d863f07abc9fe06af112cfe7c90b876eb51538> a ns3:commit ;
+    ns2:Calendar_date "2023-03-20T10:34:17+01:00"^^xsd:dateTime ;
+    ns2:author ns3:izzyrybz ;
+    ns1:modify <http://example.org/entity/__pycache__/myclassifier.cpython-310.pyc>,
+        <http://example.org/entity/common/graph/__pycache__/graph.cpython-310.pyc>,
+        <http://example.org/entity/common/graph/graph.py>,
+        <http://example.org/entity/common/query/__pycache__/querybuilder.cpython-310.pyc>,
+        <http://example.org/entity/common/query/querybuilder.py>,
+        <http://example.org/entity/learning/treelstm/__pycache__/preprocess_lcquad.cpython-310.pyc>,
+        <http://example.org/entity/learning/treelstm/preprocess_lcquad.py>,
+        ns3:ownbuild.py,
+        ns3:trash.txt ;
+    ns3:parents ns3:5ee2e36 .
 
-<http://example.org/77d863f07abc9fe06af112cfe7c90b876eb51538> a ns2:commit ;
-    ns1:Calendar_date "2023-03-20T10:34:17+01:00"^^xsd:dateTime ;
-    ns1:author ns2:izzyrybz ;
-    ns2:parents ns2:5ee2e36 .
+<http://example.org/8a968d24d5e05d907c2c33e30895945276c36f2d> a ns3:commit ;
+    ns2:Calendar_date "2023-02-22T08:31:01+01:00"^^xsd:dateTime ;
+    ns2:author ns3:izzyrybz ;
+    ns1:modify <http://example.org/entity/__pycache__/test_q_generator.cpython-310.pyc>,
+        ns3:test_q_generator.py ;
+    ns3:parents ns3:bfc2b40 .
 
-<http://example.org/8a968d24d5e05d907c2c33e30895945276c36f2d> a ns2:commit ;
-    ns1:Calendar_date "2023-02-22T08:31:01+01:00"^^xsd:dateTime ;
-    ns1:author ns2:izzyrybz ;
-    ns2:parents ns2:bfc2b40 .
+<http://example.org/9b641f0cc458ca4a5ae599c1ab773bb3d0a8f0c9> a ns3:commit ;
+    ns2:Calendar_date "2023-02-22T09:11:28+01:00"^^xsd:dateTime ;
+    ns2:author ns3:izzyrybz ;
+    ns1:modify <http://example.org/entity/__pycache__/test_q_generator.cpython-310.pyc>,
+        <http://example.org/entity/json_files/phrasemapping.json>,
+        ns3:test_q_generator.py ;
+    ns3:parents ns3:8a968d2 .
 
-<http://example.org/9b641f0cc458ca4a5ae599c1ab773bb3d0a8f0c9> a ns2:commit ;
-    ns1:Calendar_date "2023-02-22T09:11:28+01:00"^^xsd:dateTime ;
-    ns1:author ns2:izzyrybz ;
-    ns2:parents ns2:8a968d2 .
+<http://example.org/9bdeae0e4ae175abba0a34276006bc00f44a776b> a ns3:commit ;
+    ns2:Calendar_date "2023-02-13T10:16:25+01:00"^^xsd:dateTime ;
+    ns2:author ns3:izzyrybz ;
+    ns1:modify ns3:myclassifier.py,
+        ns3:ownbuild.py ;
+    ns3:parents ns3:163452b .
 
-<http://example.org/9bdeae0e4ae175abba0a34276006bc00f44a776b> a ns2:commit ;
-    ns1:Calendar_date "2023-02-13T10:16:25+01:00"^^xsd:dateTime ;
-    ns1:author ns2:izzyrybz ;
-    ns2:parents ns2:163452b .
+<http://example.org/afc487f614aee2f80735afe7e21c3de862c5ca1e> a ns3:commit ;
+    ns2:Calendar_date "2023-02-12T13:20:30+01:00"^^xsd:dateTime ;
+    ns2:author ns3:izzyrybz ;
+    ns1:modify ns3:killme.py ;
+    ns3:parents ns3:5b9bcf7 .
 
-<http://example.org/afc487f614aee2f80735afe7e21c3de862c5ca1e> a ns2:commit ;
-    ns1:Calendar_date "2023-02-12T13:20:30+01:00"^^xsd:dateTime ;
-    ns1:author ns2:izzyrybz ;
-    ns2:parents ns2:5b9bcf7 .
+<http://example.org/b290db8d9a42cbeb2d6e3198997e891dd0e2e371> a ns3:commit ;
+    ns2:Calendar_date "2023-02-28T15:21:34+01:00"^^xsd:dateTime ;
+    ns2:author ns3:izzyrybz ;
+    ns1:delete ns3:working_queries.txt ;
+    ns1:modify <http://example.org/entity/__pycache__/myphrasemapping.cpython-310.pyc>,
+        <http://example.org/entity/__pycache__/test_q_generator.cpython-310.pyc>,
+        <http://example.org/entity/common/graph/__pycache__/edge.cpython-310.pyc>,
+        <http://example.org/entity/common/graph/__pycache__/graph.cpython-310.pyc>,
+        <http://example.org/entity/common/graph/__pycache__/node.cpython-310.pyc>,
+        <http://example.org/entity/common/graph/edge.py>,
+        <http://example.org/entity/common/graph/graph.py>,
+        <http://example.org/entity/common/graph/node.py>,
+        <http://example.org/entity/common/query/__pycache__/querybuilder.cpython-310.pyc>,
+        <http://example.org/entity/common/query/querybuilder.py>,
+        <http://example.org/entity/json_files/phrasemapping.json>,
+        ns3:killme.py,
+        ns3:myphrasemapping.py,
+        ns3:ownbuild.py,
+        <http://example.org/entity/rdf_generator/main.py>,
+        ns3:test_q_generator.py,
+        <http://example.org/entity/turtle/dbpedia_3Eng_property.ttl>,
+        <http://example.org/entity/turtle/knowledge_graph.ttl> ;
+    ns3:parents ns3:caa7e69 .
 
-<http://example.org/b290db8d9a42cbeb2d6e3198997e891dd0e2e371> a ns2:commit ;
-    ns1:Calendar_date "2023-02-28T15:21:34+01:00"^^xsd:dateTime ;
-    ns1:author ns2:izzyrybz ;
-    ns2:parents ns2:caa7e69 .
+<http://example.org/beab74b1802cb8576bd9247c8adf5bacb24d2001> a ns3:commit ;
+    ns2:Calendar_date "2023-03-01T15:13:13+01:00"^^xsd:dateTime ;
+    ns2:author ns3:izzyrybz ;
+    ns1:modify <http://example.org/entity/__pycache__/myphrasemapping.cpython-310.pyc>,
+        <http://example.org/entity/common/graph/__pycache__/edge.cpython-310.pyc>,
+        <http://example.org/entity/common/graph/__pycache__/graph.cpython-310.pyc>,
+        <http://example.org/entity/common/graph/__pycache__/node.cpython-310.pyc>,
+        <http://example.org/entity/common/graph/edge.py>,
+        <http://example.org/entity/common/graph/graph.py>,
+        <http://example.org/entity/common/graph/node.py>,
+        <http://example.org/entity/json_files/phrasemapping.json>,
+        ns3:killme.py,
+        ns3:myphrasemapping.py,
+        ns3:ownbuild.py,
+        <http://example.org/entity/textfiles/not_working_queries.txt>,
+        <http://example.org/entity/turtle/dbpedia_3Eng_property.ttl> ;
+    ns3:parents ns3:b290db8 .
 
-<http://example.org/beab74b1802cb8576bd9247c8adf5bacb24d2001> a ns2:commit ;
-    ns1:Calendar_date "2023-03-01T15:13:13+01:00"^^xsd:dateTime ;
-    ns1:author ns2:izzyrybz ;
-    ns2:parents ns2:b290db8 .
+<http://example.org/bf062827b509a5809efb2960c5df5a14cd605627> a ns3:commit ;
+    ns2:Calendar_date "2023-03-20T11:11:04+01:00"^^xsd:dateTime ;
+    ns2:author ns3:izzyrybz ;
+    ns1:modify <http://example.org/entity/__pycache__/killme.cpython-310.pyc>,
+        <http://example.org/entity/__pycache__/myclassifier.cpython-310.pyc>,
+        <http://example.org/entity/__pycache__/myphrasemapping.cpython-310.pyc>,
+        <http://example.org/entity/common/graph/__pycache__/graph.cpython-310.pyc>,
+        <http://example.org/entity/common/graph/graph.py>,
+        <http://example.org/entity/common/query/__pycache__/querybuilder.cpython-310.pyc>,
+        <http://example.org/entity/common/query/querybuilder.py>,
+        <http://example.org/entity/json_files/dep_tree_cache_lcquadtest.json>,
+        <http://example.org/entity/json_files/phrasemapping.json>,
+        ns3:killme.py,
+        ns3:myphrasemapping.py,
+        <http://example.org/entity/output/tmp/a.len>,
+        <http://example.org/entity/output/tmp/a.parents>,
+        <http://example.org/entity/output/tmp/a.pos>,
+        <http://example.org/entity/output/tmp/a.rels>,
+        <http://example.org/entity/output/tmp/a.tag>,
+        <http://example.org/entity/output/tmp/a.toks>,
+        <http://example.org/entity/output/tmp/a.txt>,
+        <http://example.org/entity/output/tmp/b.parents>,
+        <http://example.org/entity/output/tmp/b.toks>,
+        <http://example.org/entity/output/tmp/b.txt>,
+        <http://example.org/entity/output/tmp/id.txt>,
+        <http://example.org/entity/output/tmp/sim.txt>,
+        ns3:ownbuild.py,
+        ns3:trash.txt ;
+    ns3:parents ns3:77d863f .
 
-<http://example.org/bf062827b509a5809efb2960c5df5a14cd605627> a ns2:commit ;
-    ns1:Calendar_date "2023-03-20T11:11:04+01:00"^^xsd:dateTime ;
-    ns1:author ns2:izzyrybz ;
-    ns2:parents ns2:77d863f .
+<http://example.org/bfc2b40ec21f7497c872ed193aee5dba2aa332f2> a ns3:commit ;
+    ns2:Calendar_date "2023-02-22T08:20:13+01:00"^^xsd:dateTime ;
+    ns2:author ns3:izzyrybz ;
+    ns1:modify <http://example.org/entity/__pycache__/classifier.cpython-310.pyc>,
+        <http://example.org/entity/__pycache__/myclassifier.cpython-310.pyc>,
+        <http://example.org/entity/__pycache__/myphrasemapping.cpython-310.pyc>,
+        <http://example.org/entity/__pycache__/test_q_generator.cpython-310.pyc>,
+        <http://example.org/entity/common/graph/__pycache__/graph.cpython-310.pyc>,
+        <http://example.org/entity/common/graph/graph.py>,
+        <http://example.org/entity/json_files/phrasemapping.json>,
+        ns3:myclassifier.py,
+        ns3:myphrasemapping.py,
+        ns3:ownbuild.py,
+        ns3:test_q_generator.py,
+        ns3:working_queries.txt ;
+    ns3:parents ns3:cb651de .
 
-<http://example.org/bfc2b40ec21f7497c872ed193aee5dba2aa332f2> a ns2:commit ;
-    ns1:Calendar_date "2023-02-22T08:20:13+01:00"^^xsd:dateTime ;
-    ns1:author ns2:izzyrybz ;
-    ns2:parents ns2:cb651de .
+<http://example.org/caa7e698cbee45f483a4d762345386e1de622af5> a ns3:commit ;
+    ns2:Calendar_date "2023-02-28T15:21:30+01:00"^^xsd:dateTime ;
+    ns2:author ns3:izzyrybz ;
+    ns1:modify <http://example.org/entity/textfiles/possible_queries.txt> ;
+    ns3:parents ns3:f3b7d52 .
 
-<http://example.org/caa7e698cbee45f483a4d762345386e1de622af5> a ns2:commit ;
-    ns1:Calendar_date "2023-02-28T15:21:30+01:00"^^xsd:dateTime ;
-    ns1:author ns2:izzyrybz ;
-    ns2:parents ns2:f3b7d52 .
+<http://example.org/cb651de0a1e1fdd57960cfb3cacb676cbb157ecf> a ns3:commit ;
+    ns2:Calendar_date "2023-02-21T11:25:56+01:00"^^xsd:dateTime ;
+    ns2:author ns3:izzyrybz ;
+    ns1:delete ns3:commits2.ttl,
+        ns3:generate_lcquad_gold.py ;
+    ns1:modify <http://example.org/entity/__pycache__/classifier.cpython-310.pyc>,
+        <http://example.org/entity/__pycache__/myphrasemapping.cpython-310.pyc>,
+        <http://example.org/entity/__pycache__/test_q_generator.cpython-310.pyc>,
+        ns3:classifier.py,
+        <http://example.org/entity/common/graph/__pycache__/graph.cpython-310.pyc>,
+        <http://example.org/entity/common/graph/graph.py>,
+        <http://example.org/entity/json_files/dmump.json>,
+        <http://example.org/entity/json_files/phrasemapping.json>,
+        ns3:killme.py,
+        ns3:ownbuild.py,
+        ns3:pre_made_q_generator.py,
+        ns3:test_q_generator.py ;
+    ns3:parents ns3:0c3b4d8 .
 
-<http://example.org/cb651de0a1e1fdd57960cfb3cacb676cbb157ecf> a ns2:commit ;
-    ns1:Calendar_date "2023-02-21T11:25:56+01:00"^^xsd:dateTime ;
-    ns1:author ns2:izzyrybz ;
-    ns2:parents ns2:0c3b4d8 .
+<http://example.org/d99c03f35aa067268796fdf5374aa8587801ecb3> a ns3:commit ;
+    ns2:Calendar_date "2023-02-17T10:32:02+01:00"^^xsd:dateTime ;
+    ns2:author ns3:izzyrybz ;
+    ns1:modify <http://example.org/entity/__pycache__/knowledgegraph_generator.cpython-310.pyc>,
+        <http://example.org/entity/__pycache__/myphrasemapping.cpython-310.pyc>,
+        <http://example.org/entity/json_files/phrasemapping.json>,
+        ns3:knowledgegraph_generator.py,
+        ns3:myphrasemapping.py,
+        <http://example.org/entity/rdf_generator/main.py>,
+        <http://example.org/entity/turtle/dbpedia_3Eng_class.ttl>,
+        <http://example.org/entity/turtle/knowledge_graph.ttl> ;
+    ns3:parents ns3:28d7329 .
 
-<http://example.org/d99c03f35aa067268796fdf5374aa8587801ecb3> a ns2:commit ;
-    ns1:Calendar_date "2023-02-17T10:32:02+01:00"^^xsd:dateTime ;
-    ns1:author ns2:izzyrybz ;
-    ns2:parents ns2:28d7329 .
+<http://example.org/deb7f48be7457bcc0f9213d1cfda2de0ffde9aa9> a ns3:commit ;
+    ns2:Calendar_date "2023-03-20T10:21:38+01:00"^^xsd:dateTime ;
+    ns2:author ns3:izzyrybz ;
+    ns1:add <http://example.org/entity/data/LC-QUAD/data.json>,
+        <http://example.org/entity/data/LC-QUAD/entity_lcquad.json>,
+        <http://example.org/entity/data/LC-QUAD/entity_lcquad_test.json>,
+        <http://example.org/entity/data/LC-QUAD/linked_answer.json>,
+        <http://example.org/entity/data/LC-QUAD/linked_test.json>,
+        <http://example.org/entity/data/LC-QUAD/templates.json>,
+        <http://example.org/entity/data/LC-QUAD/test-data.json>,
+        <http://example.org/entity/data/LC-QUAD/train-data.json>,
+        <http://example.org/entity/data/QALD/entity_qald.json>,
+        <http://example.org/entity/data/QALD/qald-7-train-multilingual.json> ;
+    ns1:delete ns3:pre_made_q_generator.py,
+        ns3:querygenerator.py ;
+    ns1:modify <http://example.org/entity/__pycache__/killme.cpython-310.pyc>,
+        <http://example.org/entity/__pycache__/myclassifier.cpython-310.pyc>,
+        <http://example.org/entity/common/graph/__pycache__/graph.cpython-310.pyc>,
+        <http://example.org/entity/common/graph/__pycache__/paths.cpython-310.pyc>,
+        <http://example.org/entity/common/graph/graph.py>,
+        <http://example.org/entity/common/graph/paths.py>,
+        <http://example.org/entity/common/query/__pycache__/querybuilder.cpython-310.pyc>,
+        <http://example.org/entity/common/query/querybuilder.py>,
+        <http://example.org/entity/common/utility/__pycache__/utility.cpython-310.pyc>,
+        <http://example.org/entity/common/utility/utility.py>,
+        <http://example.org/entity/json_files/dep_tree_cache_lcquadtest.json>,
+        <http://example.org/entity/json_files/phrasemapping.json>,
+        ns3:killme.py,
+        <http://example.org/entity/learning/treelstm/__pycache__/config.cpython-310.pyc>,
+        <http://example.org/entity/learning/treelstm/__pycache__/dataset.cpython-310.pyc>,
+        <http://example.org/entity/learning/treelstm/__pycache__/metrics.cpython-310.pyc>,
+        <http://example.org/entity/learning/treelstm/__pycache__/model.cpython-310.pyc>,
+        <http://example.org/entity/learning/treelstm/__pycache__/preprocess_lcquad.cpython-310.pyc>,
+        <http://example.org/entity/learning/treelstm/__pycache__/trainer.cpython-310.pyc>,
+        <http://example.org/entity/learning/treelstm/__pycache__/utils.cpython-310.pyc>,
+        <http://example.org/entity/learning/treelstm/dataset.py>,
+        <http://example.org/entity/learning/treelstm/main.py>,
+        <http://example.org/entity/learning/treelstm/model.py>,
+        <http://example.org/entity/learning/treelstm/preprocess_lcquad.py>,
+        <http://example.org/entity/learning/treelstm/utils.py>,
+        ns3:myclassifier.py,
+        <http://example.org/entity/output/tmp/a.len>,
+        <http://example.org/entity/output/tmp/a.parents>,
+        <http://example.org/entity/output/tmp/a.pos>,
+        <http://example.org/entity/output/tmp/a.rels>,
+        <http://example.org/entity/output/tmp/a.tag>,
+        <http://example.org/entity/output/tmp/a.toks>,
+        <http://example.org/entity/output/tmp/a.txt>,
+        <http://example.org/entity/output/tmp/b.parents>,
+        <http://example.org/entity/output/tmp/b.toks>,
+        <http://example.org/entity/output/tmp/b.txt>,
+        <http://example.org/entity/output/tmp/id.txt>,
+        <http://example.org/entity/output/tmp/sim.txt>,
+        ns3:ownbuild.py,
+        <http://example.org/entity/parser/__pycache__/lc_quad_linked.cpython-310.pyc>,
+        <http://example.org/entity/parser/lc_quad_linked.py>,
+        <http://example.org/entity/rdf_generator/main.py>,
+        <http://example.org/entity/textfiles/not_working_queries.txt>,
+        <http://example.org/entity/textfiles/possible_queries.txt>,
+        <http://example.org/entity/turtle/knowledge_graph.ttl> ;
+    ns3:parents ns3:003757c .
 
-<http://example.org/deb7f48be7457bcc0f9213d1cfda2de0ffde9aa9> a ns2:commit ;
-    ns1:Calendar_date "2023-03-20T10:21:38+01:00"^^xsd:dateTime ;
-    ns1:author ns2:izzyrybz ;
-    ns2:parents ns2:003757c .
+<http://example.org/df640ae4aa01b509be9c2f3f84157648f3f3f7b5> a ns3:commit ;
+    ns2:Calendar_date "2023-02-13T11:50:27+01:00"^^xsd:dateTime ;
+    ns2:author ns3:izzyrybz ;
+    ns1:modify <http://example.org/entity/__pycache__/myclassifier.cpython-310.pyc>,
+        ns3:myclassifier.py,
+        ns3:ownbuild.py ;
+    ns3:parents ns3:9bdeae0 .
 
-<http://example.org/df640ae4aa01b509be9c2f3f84157648f3f3f7b5> a ns2:commit ;
-    ns1:Calendar_date "2023-02-13T11:50:27+01:00"^^xsd:dateTime ;
-    ns1:author ns2:izzyrybz ;
-    ns2:parents ns2:9bdeae0 .
-
-<http://example.org/f3b7d5240451327d51e4b76ebe0f7580e9369340> a ns2:commit ;
-    ns1:Calendar_date "2023-02-22T10:09:32+01:00"^^xsd:dateTime ;
-    ns1:author ns2:izzyrybz ;
-    ns2:parents ns2:44f0fc3 .
+<http://example.org/f3b7d5240451327d51e4b76ebe0f7580e9369340> a ns3:commit ;
+    ns2:Calendar_date "2023-02-22T10:09:32+01:00"^^xsd:dateTime ;
+    ns2:author ns3:izzyrybz ;
+    ns3:parents ns3:44f0fc3 .
 

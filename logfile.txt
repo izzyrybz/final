@@ -1,5 +1,5 @@
 * 
-| commit:2b0fca49cf86f519c9afb0d2de95a66c46750683,Author:izzyrybz,Date:Tue Mar 21 13:48:34 2023 +0100,Parents:bf06282
+| commit:2b0fca49cf86f519c9afb0d2de95a66c46750683,Author:izzyrybz,Description: made it work for the question How many commits have there been?,Date:Tue Mar 21 13:48:34 2023 +0100,Parents:bf06282
 | Changed Files:
 | 
 | M	__pycache__/killme.cpython-310.pyc
@@ -29,7 +29,7 @@
 | M	trash.txt
 | 
 * 
-| commit:bf062827b509a5809efb2960c5df5a14cd605627,Author:izzyrybz,Date:Mon Mar 20 11:11:04 2023 +0100,Parents:77d863f
+| commit:bf062827b509a5809efb2960c5df5a14cd605627,Author:izzyrybz,Description: made list work and count,Date:Mon Mar 20 11:11:04 2023 +0100,Parents:77d863f
 | Changed Files:
 | 
 | M	__pycache__/killme.cpython-310.pyc
@@ -59,7 +59,7 @@
 | M	trash.txt
 | 
 * 
-| commit:77d863f07abc9fe06af112cfe7c90b876eb51538,Author:izzyrybz,Date:Mon Mar 20 10:34:17 2023 +0100,Parents:5ee2e36
+| commit:77d863f07abc9fe06af112cfe7c90b876eb51538,Author:izzyrybz,Description: extended the type classification,Date:Mon Mar 20 10:34:17 2023 +0100,Parents:5ee2e36
 | Changed Files:
 | 
 | M	__pycache__/myclassifier.cpython-310.pyc
@@ -73,7 +73,7 @@
 | M	trash.txt
 | 
 * 
-| commit:5ee2e36a37b77318d2580550a686bfbf841f49a6,Author:izzyrybz,Date:Mon Mar 20 10:23:08 2023 +0100,Parents:deb7f48
+| commit:5ee2e36a37b77318d2580550a686bfbf841f49a6,Author:izzyrybz,Description: idk if this works,Date:Mon Mar 20 10:23:08 2023 +0100,Parents:deb7f48
 | Changed Files:
 | 
 | M	.gitignore
@@ -141,7 +141,7 @@
 | M	learning/treelstm/data/lc_quad/vocab.txt
 | 
 * 
-| commit:deb7f48be7457bcc0f9213d1cfda2de0ffde9aa9,Author:izzyrybz,Date:Mon Mar 20 10:21:38 2023 +0100,Parents:003757c
+| commit:deb7f48be7457bcc0f9213d1cfda2de0ffde9aa9,Author:izzyrybz,Description: why wont you let me commit,Date:Mon Mar 20 10:21:38 2023 +0100,Parents:003757c
 | Changed Files:
 | 
 | A	.gitignore
@@ -212,19 +212,19 @@
 | M	turtle/knowledge_graph.ttl
 | 
 * 
-| commit:003757c6423a66b7aabc5601e9d32f910a9ae9cc,Author:izzyrybz,Date:Tue Mar 14 13:35:44 2023 +0100,Parents:4f1dc63
+| commit:003757c6423a66b7aabc5601e9d32f910a9ae9cc,Author:izzyrybz,Description: lets see if this work,Date:Tue Mar 14 13:35:44 2023 +0100,Parents:4f1dc63
 | Changed Files:
 | 
 | M	killme.py
 | 
 * 
-| commit:4f1dc6391ca55ea2d1872989ff436e02a0598bdc,Author:izzyrybz,Date:Tue Mar 14 13:17:50 2023 +0100,Parents:0c8471e
+| commit:4f1dc6391ca55ea2d1872989ff436e02a0598bdc,Author:izzyrybz,Description: The training is now done and showing dif pred in trash.txt,Date:Tue Mar 14 13:17:50 2023 +0100,Parents:0c8471e
 | Changed Files:
 | 
 | M	learning/treelstm/trainer.py
 | 
 * 
-| commit:0c8471e02d824de8485e1abcfcd00c5b20ae995e,Author:izzyrybz,Date:Mon Mar 6 11:51:35 2023 +0100,Parents:4048394
+| commit:0c8471e02d824de8485e1abcfcd00c5b20ae995e,Author:izzyrybz,Description: working ranking but saying the same query twice,Date:Mon Mar 6 11:51:35 2023 +0100,Parents:4048394
 | Changed Files:
 | 
 | M	__pycache__/killme.cpython-310.pyc
@@ -276,7 +276,7 @@
 | M	parser/answerparser.py
 | 
 * 
-| commit:404839419224303b291e222bf0cc4aa7de8e2378,Author:izzyrybz,Date:Sun Mar 5 10:42:57 2023 +0100,Parents:66088ec
+| commit:404839419224303b291e222bf0cc4aa7de8e2378,Author:izzyrybz,Description: valid_walks works,Date:Sun Mar 5 10:42:57 2023 +0100,Parents:66088ec
 | Changed Files:
 | 
 | M	__pycache__/killme.cpython-310.pyc
@@ -310,7 +310,7 @@
 | M	turtle/dbpedia_3Eng_property.ttl
 | 
 * 
-| commit:66088ec6289389cdda9be251f696f8afc6375807,Author:izzyrybz,Date:Thu Mar 2 10:25:22 2023 +0100,Parents:beab74b
+| commit:66088ec6289389cdda9be251f696f8afc6375807,Author:izzyrybz,Description: Which commits have the user izzyrybz made? works from ownbuild,Date:Thu Mar 2 10:25:22 2023 +0100,Parents:beab74b
 | Changed Files:
 | 
 | A	allcombo.txt
@@ -320,7 +320,7 @@
 | M	ownbuild.py
 | 
 * 
-| commit:beab74b1802cb8576bd9247c8adf5bacb24d2001,Author:izzyrybz,Date:Wed Mar 1 15:13:13 2023 +0100,Parents:b290db8
+| commit:beab74b1802cb8576bd9247c8adf5bacb24d2001,Author:izzyrybz,Description: works with author questions,Date:Wed Mar 1 15:13:13 2023 +0100,Parents:b290db8
 | Changed Files:
 | 
 | A	__pycache__/killme.cpython-310.pyc
@@ -339,7 +339,7 @@
 | M	turtle/dbpedia_3Eng_property.ttl
 | 
 * 
-| commit:b290db8d9a42cbeb2d6e3198997e891dd0e2e371,Author:izzyrybz,Date:Tue Feb 28 15:21:34 2023 +0100,Parents:caa7e69
+| commit:b290db8d9a42cbeb2d6e3198997e891dd0e2e371,Author:izzyrybz,Description: EDIT SO KILLME KINDA WORKS,Date:Tue Feb 28 15:21:34 2023 +0100,Parents:caa7e69
 | Changed Files:
 | 
 | M	__pycache__/myphrasemapping.cpython-310.pyc
@@ -366,25 +366,25 @@
 | D	working_queries.txt
 | 
 * 
-| commit:caa7e698cbee45f483a4d762345386e1de622af5,Author:izzyrybz,Date:Tue Feb 28 15:21:30 2023 +0100,Parents:f3b7d52
+| commit:caa7e698cbee45f483a4d762345386e1de622af5,Author:izzyrybz,Description: some what working for kill me,Date:Tue Feb 28 15:21:30 2023 +0100,Parents:f3b7d52
 | Changed Files:
 | 
 | M	textfiles/possible_queries.txt
 | 
 * 
-| commit:f3b7d5240451327d51e4b76ebe0f7580e9369340,Author:izzyrybz,Date:Wed Feb 22 10:09:32 2023 +0100,Parents:44f0fc3
+| commit:f3b7d5240451327d51e4b76ebe0f7580e9369340,Author:izzyrybz,Description: extended textfiles,Date:Wed Feb 22 10:09:32 2023 +0100,Parents:44f0fc3
 | Changed Files:
 | 
 | A	textfiles/possible_queries.txt
 | 
 * 
-| commit:44f0fc33858d49cc7f8fa6e759eb91878c46f633,Author:izzyrybz,Date:Wed Feb 22 09:11:45 2023 +0100,Parents:9b641f0
+| commit:44f0fc33858d49cc7f8fa6e759eb91878c46f633,Author:izzyrybz,Description: made things work,Date:Wed Feb 22 09:11:45 2023 +0100,Parents:9b641f0
 | Changed Files:
 | 
 | M	test_q_generator.py
 | 
 * 
-| commit:9b641f0cc458ca4a5ae599c1ab773bb3d0a8f0c9,Author:izzyrybz,Date:Wed Feb 22 09:11:28 2023 +0100,Parents:8a968d2
+| commit:9b641f0cc458ca4a5ae599c1ab773bb3d0a8f0c9,Author:izzyrybz,Description: works with Which commits have the user izzyrybz made?,Date:Wed Feb 22 09:11:28 2023 +0100,Parents:8a968d2
 | Changed Files:
 | 
 | M	__pycache__/test_q_generator.cpython-310.pyc
@@ -392,14 +392,14 @@
 | M	test_q_generator.py
 | 
 * 
-| commit:8a968d24d5e05d907c2c33e30895945276c36f2d,Author:izzyrybz,Date:Wed Feb 22 08:31:01 2023 +0100,Parents:bfc2b40
+| commit:8a968d24d5e05d907c2c33e30895945276c36f2d,Author:izzyrybz,Description: improved the get_entity_relation_from_graph,Date:Wed Feb 22 08:31:01 2023 +0100,Parents:bfc2b40
 | Changed Files:
 | 
 | M	__pycache__/test_q_generator.cpython-310.pyc
 | M	test_q_generator.py
 | 
 * 
-| commit:bfc2b40ec21f7497c872ed193aee5dba2aa332f2,Author:izzyrybz,Date:Wed Feb 22 08:20:13 2023 +0100,Parents:cb651de
+| commit:bfc2b40ec21f7497c872ed193aee5dba2aa332f2,Author:izzyrybz,Description: extended ownbuilt q generator,Date:Wed Feb 22 08:20:13 2023 +0100,Parents:cb651de
 | Changed Files:
 | 
 | M	__pycache__/classifier.cpython-310.pyc
@@ -416,7 +416,7 @@
 | M	working_queries.txt
 | 
 * 
-| commit:cb651de0a1e1fdd57960cfb3cacb676cbb157ecf,Author:izzyrybz,Date:Tue Feb 21 11:25:56 2023 +0100,Parents:0c3b4d8
+| commit:cb651de0a1e1fdd57960cfb3cacb676cbb157ecf,Author:izzyrybz,Description: fixed and added stuff from premade code,Date:Tue Feb 21 11:25:56 2023 +0100,Parents:0c3b4d8
 | Changed Files:
 | 
 | M	__pycache__/classifier.cpython-310.pyc
@@ -535,13 +535,13 @@
 | M	test_q_generator.py
 | 
 * 
-| commit:0c3b4d81a5b086ddbb2c400ef14966125b9d3430,Author:izzyrybz,Date:Tue Feb 21 11:25:18 2023 +0100,Parents:3da3684
+| commit:0c3b4d81a5b086ddbb2c400ef14966125b9d3430,Author:izzyrybz,Description: added files from premade code,Date:Tue Feb 21 11:25:18 2023 +0100,Parents:3da3684
 | Changed Files:
 | 
 | M	myphrasemapping.py
 | 
 * 
-| commit:3da3684d813248a361780e1ecb38506a88ca0b76,Author:izzyrybz,Date:Mon Feb 20 15:23:06 2023 +0100,Parents:d99c03f
+| commit:3da3684d813248a361780e1ecb38506a88ca0b76,Author:izzyrybz,Description: phrasemapping should be done,Date:Mon Feb 20 15:23:06 2023 +0100,Parents:d99c03f
 | Changed Files:
 | 
 | M	__pycache__/myclassifier.cpython-310.pyc
@@ -565,7 +565,7 @@
 | A	working_queries.txt
 | 
 * 
-| commit:d99c03f35aa067268796fdf5374aa8587801ecb3,Author:izzyrybz,Date:Fri Feb 17 10:32:02 2023 +0100,Parents:28d7329
+| commit:d99c03f35aa067268796fdf5374aa8587801ecb3,Author:izzyrybz,Description: changed the knowledge graph generation so it better suits the preprocessedfile,Date:Fri Feb 17 10:32:02 2023 +0100,Parents:28d7329
 | Changed Files:
 | 
 | M	__pycache__/knowledgegraph_generator.cpython-310.pyc
@@ -578,7 +578,7 @@
 | M	turtle/knowledge_graph.ttl
 | 
 * 
-| commit:28d73295e092c618c2a3a42c8e801d9b72faee1f,Author:izzyrybz,Date:Fri Feb 17 09:05:40 2023 +0100,Parents:42b00da
+| commit:28d73295e092c618c2a3a42c8e801d9b72faee1f,Author:izzyrybz,Description: made several changes,Date:Fri Feb 17 09:05:40 2023 +0100,Parents:42b00da
 | Changed Files:
 | 
 | A	__pycache__/knowledgegraph_generator.cpython-310.pyc
@@ -598,7 +598,7 @@
 | M	turtle/needed_information.ttl
 | 
 * 
-| commit:42b00da333db369a1e48f9a38e4f54502b9e53b2,Author:izzyrybz,Date:Mon Feb 13 15:50:35 2023 +0100,Parents:df640ae
+| commit:42b00da333db369a1e48f9a38e4f54502b9e53b2,Author:izzyrybz,Description: moved around some files,Date:Mon Feb 13 15:50:35 2023 +0100,Parents:df640ae
 | Changed Files:
 | 
 | M	__pycache__/myclassifier.cpython-310.pyc
@@ -616,7 +616,7 @@
 | A	turtle/needed_information.ttl
 | 
 * 
-| commit:df640ae4aa01b509be9c2f3f84157648f3f3f7b5,Author:izzyrybz,Date:Mon Feb 13 11:50:27 2023 +0100,Parents:9bdeae0
+| commit:df640ae4aa01b509be9c2f3f84157648f3f3f7b5,Author:izzyrybz,Description: 18/20 count correct in the test case. Not as easy to check the rest,Date:Mon Feb 13 11:50:27 2023 +0100,Parents:9bdeae0
 | Changed Files:
 | 
 | M	__pycache__/myclassifier.cpython-310.pyc
@@ -624,7 +624,7 @@
 | M	ownbuild.py
 | 
 * 
-| commit:9bdeae0e4ae175abba0a34276006bc00f44a776b,Author:izzyrybz,Date:Mon Feb 13 10:16:25 2023 +0100,Parents:163452b
+| commit:9bdeae0e4ae175abba0a34276006bc00f44a776b,Author:izzyrybz,Description: Works but classifies some questions wrong,Date:Mon Feb 13 10:16:25 2023 +0100,Parents:163452b
 | Changed Files:
 | 
 | A	__pycache__/myclassifier.cpython-310.pyc
@@ -632,19 +632,19 @@
 | M	ownbuild.py
 | 
 * 
-| commit:163452bef637039fd49cdbbea22983b7669db5b3,Author:izzyrybz,Date:Sun Feb 12 15:28:51 2023 +0100,Parents:afc487f
+| commit:163452bef637039fd49cdbbea22983b7669db5b3,Author:izzyrybz,Description: added training,Date:Sun Feb 12 15:28:51 2023 +0100,Parents:afc487f
 | Changed Files:
 | 
 | A	myclassifier.py
 | 
 * 
-| commit:afc487f614aee2f80735afe7e21c3de862c5ca1e,Author:izzyrybz,Date:Sun Feb 12 13:20:30 2023 +0100,Parents:5b9bcf7
+| commit:afc487f614aee2f80735afe7e21c3de862c5ca1e,Author:izzyrybz,Description: Inital commit,Date:Sun Feb 12 13:20:30 2023 +0100,Parents:5b9bcf7
 | Changed Files:
 | 
 | M	killme.py
 | 
 * 
-  commit:5b9bcf7f61a09b73e62d010b4a9b0e75f8ce66ca,Author:izzyrybz,Date:Sun Feb 12 13:19:59 2023 +0100,Parents:
+  commit:5b9bcf7f61a09b73e62d010b4a9b0e75f8ce66ca,Author:izzyrybz,Description: first commit,Date:Sun Feb 12 13:19:59 2023 +0100,Parents:
   Changed Files:
   
   A	__pycache__/classifier.cpython-310.pyc

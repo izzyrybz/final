@@ -25,7 +25,9 @@ cd "$1"
 echo "fetching the git repository information"
 log=$(git log --graph --boundary --pretty=format:'%ncommit:%H,Author:%an,Description: %s,Date:%cd,Parents:%p%nChanged Files:%n' --name-status | sed -e 's/^commit/******&/')
 #echo $2
-#log=$(git log --graph --boundary --pretty=format: '$2' --name-status | sed -e 's/^commit/******&/')
+
+#this one contains branches which i dont have functionality for
+#log=$(git log --graph --pretty=format:'%ncommit:%H,Author:%an,Date:%ad,Parents:%p%nBranches:%d%nChanged Files:%n' --name-status)
 
 #echo $log
 

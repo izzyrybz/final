@@ -53,7 +53,7 @@ def info_between_elements(lst, A, B):
     ############################################ PROCESS THE INFORMATION FROM THE LOGFILE ###################################3
 
 def process_logfile(path):
-    commit = {"commit_ref": "", "author": "", "description": "" ,"date":"" ,"changed_files": [], "parents" :""}
+    commit = {"commit_ref": "", "author": "", "description": "" ,"date":"" ,"changed_files": [], "parents" :""} #, "branches":""
     history = []
     date_format = "%a %b %d %H:%M:%S %Y %z"
     with open(path,'r') as f:
@@ -70,7 +70,6 @@ def process_logfile(path):
                 if ('commit:' in element):
                     #print(element)
                     hash = element[element.index(":") + 1:]
-
                     commit["commit_ref"]  = hash
                 if('Author:' in element): 
                     #print("adding person",line[index+1])
@@ -89,8 +88,15 @@ def process_logfile(path):
                     #print(date_string_with_t)                    
                     
                     commit["date"] = date_string_with_t
-                
+
+                #Possible to add branch info here
+
                 if('Parents:' in element): 
+                    #print(element[element.index(":") + 1:].strip())
+                    parents = element[element.index(":") + 1:].strip()
+                    commit["parents"] = parents
+                
+                if('Lines:' in element): 
                     #print(element[element.index(":") + 1:].strip())
                     parents = element[element.index(":") + 1:].strip()
                     commit["parents"] = parents
@@ -141,6 +147,9 @@ def process_logfile(path):
 
     #I am not sure if these are correct but we are working with it
     Parent = URIRef("http://example.org/entity/parents")
+
+    #Branches = URIRef("http://example.org/entity/branches")
+
     Modify = URIRef("http://example.org/action/modify")
     Delete = URIRef("http://example.org/action/delete")
     Add = URIRef("http://example.org/action/add")

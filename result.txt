@@ -1,0 +1,48 @@
+?u3 ?u1 ?u2
+SELECT * WHERE { ?u3 ?u1 ?u2 }
+?u2 <http://example.org/ontology/author> ?u1
+SELECT * WHERE { ?u2 <http://example.org/ontology/author> ?u1 }
+?u1 <http://example.org/ontology/author> ?u2
+SELECT * WHERE { ?u1 <http://example.org/ontology/author> ?u2 }
+?u1 ?u3 ?u2
+SELECT * WHERE { ?u1 ?u3 ?u2 }
+?u1 <http://example.org/ontology/author> ?u3
+SELECT * WHERE { ?u1 <http://example.org/ontology/author> ?u3 }
+?u3 <http://example.org/ontology/author> ?u2
+SELECT * WHERE { ?u3 <http://example.org/ontology/author> ?u2 }
+?u3 <http://example.org/ontology/author> ?u1
+SELECT * WHERE { ?u3 <http://example.org/ontology/author> ?u1 }
+?u2 <http://example.org/ontology/author> ?u3
+SELECT * WHERE { ?u2 <http://example.org/ontology/author> ?u3 }
+?u3 ?u1 ?u2 . ?u3 <http://example.org/ontology/author> ?u2 
+SELECT * WHERE {  ?u3 ?u1 ?u2 . ?u3 <http://example.org/ontology/author> ?u2 }
+?u2 <http://example.org/ontology/author> ?u1 . ?u3 <http://example.org/ontology/author> ?u1 
+SELECT * WHERE {  ?u2 <http://example.org/ontology/author> ?u1 . ?u3 <http://example.org/ontology/author> ?u1 }
+?u2 <http://example.org/ontology/author> ?u1 . ?u2 <http://example.org/ontology/author> ?u3 
+SELECT * WHERE {  ?u2 <http://example.org/ontology/author> ?u1 . ?u2 <http://example.org/ontology/author> ?u3 }
+?u1 <http://example.org/ontology/author> ?u2 . ?u1 ?u3 ?u2 
+SELECT * WHERE {  ?u1 <http://example.org/ontology/author> ?u2 . ?u1 ?u3 ?u2 }
+?u1 <http://example.org/ontology/author> ?u2 . ?u1 <http://example.org/ontology/author> ?u3 
+SELECT * WHERE {  ?u1 <http://example.org/ontology/author> ?u2 . ?u1 <http://example.org/ontology/author> ?u3 }
+?u1 <http://example.org/ontology/author> ?u2 . ?u3 <http://example.org/ontology/author> ?u2 
+SELECT * WHERE {  ?u1 <http://example.org/ontology/author> ?u2 . ?u3 <http://example.org/ontology/author> ?u2 }
+?u1 ?u3 ?u2 . ?u1 <http://example.org/ontology/author> ?u2 
+SELECT * WHERE {  ?u1 ?u3 ?u2 . ?u1 <http://example.org/ontology/author> ?u2 }
+?u1 <http://example.org/ontology/author> ?u3 . ?u1 <http://example.org/ontology/author> ?u2 
+SELECT * WHERE {  ?u1 <http://example.org/ontology/author> ?u3 . ?u1 <http://example.org/ontology/author> ?u2 }
+?u1 <http://example.org/ontology/author> ?u3 . ?u2 <http://example.org/ontology/author> ?u3 
+SELECT * WHERE {  ?u1 <http://example.org/ontology/author> ?u3 . ?u2 <http://example.org/ontology/author> ?u3 }
+?u3 <http://example.org/ontology/author> ?u2 . ?u3 ?u1 ?u2 
+SELECT * WHERE {  ?u3 <http://example.org/ontology/author> ?u2 . ?u3 ?u1 ?u2 }
+?u3 <http://example.org/ontology/author> ?u2 . ?u1 <http://example.org/ontology/author> ?u2 
+SELECT * WHERE {  ?u3 <http://example.org/ontology/author> ?u2 . ?u1 <http://example.org/ontology/author> ?u2 }
+?u3 <http://example.org/ontology/author> ?u2 . ?u3 <http://example.org/ontology/author> ?u1 
+SELECT * WHERE {  ?u3 <http://example.org/ontology/author> ?u2 . ?u3 <http://example.org/ontology/author> ?u1 }
+?u3 <http://example.org/ontology/author> ?u1 . ?u2 <http://example.org/ontology/author> ?u1 
+SELECT * WHERE {  ?u3 <http://example.org/ontology/author> ?u1 . ?u2 <http://example.org/ontology/author> ?u1 }
+?u3 <http://example.org/ontology/author> ?u1 . ?u3 <http://example.org/ontology/author> ?u2 
+SELECT * WHERE {  ?u3 <http://example.org/ontology/author> ?u1 . ?u3 <http://example.org/ontology/author> ?u2 }
+?u2 <http://example.org/ontology/author> ?u3 . ?u2 <http://example.org/ontology/author> ?u1 
+SELECT * WHERE {  ?u2 <http://example.org/ontology/author> ?u3 . ?u2 <http://example.org/ontology/author> ?u1 }
+?u2 <http://example.org/ontology/author> ?u3 . ?u1 <http://example.org/ontology/author> ?u3 
+SELECT * WHERE {  ?u2 <http://example.org/ontology/author> ?u3 . ?u1 <http://example.org/ontology/author> ?u3 }

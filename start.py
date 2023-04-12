@@ -16,18 +16,21 @@ print("#"*80)
 #attri = '%ncommit:%H,Author:%an,Description: %s,Date:%cd,Parents:%p%nChanged Files:%n'
 #process = subprocess.Popen(['./git_fetch_script.sh', repo, attri], stdout=subprocess.PIPE)
 
-repo = input("Please provide the path that the repo is saved under, from the file you are in right now \n(Example: ../rdf_code) \n")
+#repo = input("Please provide the path that the repo is saved under, from the file you are in right now \n(Example: ../rdf_code) \n")
 
-repo = '../rdf_code'
+#repo= '../rdf_code'
+repo = '../repo-copy/teammates'
 
 process = subprocess.Popen(['./git_fetch_script.sh', repo], stdout=subprocess.PIPE)
 
 output, error = process.communicate()
 print(output.decode())
 
-if (os.path.dirname(os.path.realpath('logfile.txt'))):
+if (os.path.dirname(os.path.realpath('logfile2.txt'))):
 
-    ttl_file_path = process_logfile('logfile.txt')
+    ttl_file_path = process_logfile('logfile2.txt')
+
+print("we are done")
 
 #ownbuild.main(question)
 

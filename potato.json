@@ -1,0 +1,442 @@
+[
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u1 <http://example.org/action/modify> ?u2.?u1 <http://example.org/action/delete> ?u3",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u1 <http://example.org/action/delete> <http://example.org/entity/commits.txt> . ?u1 ?u2 <http://example.org/entity/commits.txt>. ?u1 <http://example.org/action/modify> ?u3 ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u3 <http://example.org/action/modify> ?u2 . ?u3 <http://example.org/action/delete> ?u1. ?u3 <http://example.org/action/modify> ?u1 ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u2 <http://example.org/action/modify> ?u3 . ?u1 <http://example.org/action/delete> <http://example.org/entity/commits.txt>. ?u1 <http://example.org/action/delete> ?u3 ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": true,
+                "query": "?u2 <http://example.org/action/delete> ?u1 . ?u2 <http://example.org/action/modify> ?u3 ",
+                "target_var": "?u2"
+            },
+            {
+                "correct": true,
+                "query": "?u3 <http://example.org/action/delete> ?u1 . ?u3 <http://example.org/action/modify> ?u2 ",
+                "target_var": "?u3"
+            },
+            {
+                "correct": false,
+                "query": "?u1 <http://example.org/action/modify> ?u2 . ?u1 <http://example.org/action/delete> ?u2. ?u1 <http://example.org/action/delete> <http://example.org/entity/commits.txt> ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u1 <http://example.org/action/modify> ?u2 . ?u3 <http://example.org/action/modify> ?u2 ",
+                "target_var": "?u1"
+            }
+        ],
+        "id": 21,
+        "query": "SELECT ?u1 WHERE {?u1 <http://example.org/action/modify> ?u2.?u1 <http://example.org/action/delete> ?u3}",
+        "question": "Which commits had both removed and changed files?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u1 <http://example.org/action/modify> ?u3",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u1 <http://example.org/action/modify> ?u3 . ?u2 <http://example.org/action/modify> ?u3. ?u1 <http://example.org/action/delete> <http://example.org/entity/commits.txt> ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u3 <http://example.org/action/modify> ?u2 . ?u3 <http://example.org/action/delete> ?u1 ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u1 <http://example.org/action/modify> ?u2 . ?u1 <http://example.org/action/delete> <http://example.org/entity/commits.txt>. ?u3 <http://example.org/action/modify> ?u2 ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u1 ?u3 <http://example.org/entity/commits.txt> . ?u1 ?u2 <http://example.org/entity/commits.txt> ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u1 <http://example.org/action/delete> ?u2 . ?u1 <http://example.org/action/delete> <http://example.org/entity/commits.txt>. ?u1 ?u3 <http://example.org/entity/commits.txt> ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u2 <http://example.org/action/modify> ?u1 . ?u2 <http://example.org/action/delete> ?u1. ?u3 <http://example.org/action/modify> ?u1 ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u1 <http://example.org/action/modify> ?u3 . ?u2 <http://example.org/action/modify> ?u3. ?u1 <http://example.org/action/delete> <http://example.org/entity/commits.txt> ",
+                "target_var": "?u1"
+            }
+        ],
+        "id": 22,
+        "query": "SELECT ?u1 WHERE {?u1 <http://example.org/action/modify> ?u3}",
+        "question": "Which commits modified files?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "single"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u1 <http://example.org/action/delete> <http://example.org/entity/trash.py> ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u1 ?u3 <http://example.org/entity/commit> . ?u1 <http://example.org/action/delete> ?u2. ?u1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u2 ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u2 <http://example.org/action/delete> ?u3 . ?u2 ?u1 <http://example.org/entity/trash.py>. ?u2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u3 ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u3 ?u2 <http://example.org/entity/commit> . ?u3 ?u1 <http://example.org/entity/trash.py>. ?u3 ?u1 <http://example.org/entity/commit> ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u1 <http://example.org/action/delete> <http://example.org/entity/trash.py> . ?u1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/commit>. ?u1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u2 ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u1 ?u2 <http://example.org/entity/trash.py> . ?u3 ?u2 <http://example.org/entity/commit>. ?u1 <http://example.org/action/delete> <http://example.org/entity/trash.py> ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u2 <http://example.org/action/delete> ?u3 . ?u1 <http://example.org/action/modify> <http://example.org/entity/trash.py>. ?u1 <http://example.org/action/delete> ?u3 ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u2 <http://example.org/action/delete> ?u1 . ?u3 <http://example.org/action/delete> ?u1. ?u2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u1 ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u1 <http://example.org/action/delete> <http://example.org/entity/trash.py> . ?u1 <http://example.org/action/modify> ?u2. ?u3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u2 ",
+                "target_var": "?u1"
+            }
+        ],
+        "id": 23,
+        "query": "SELECT ?u1 WHERE {?u1 <http://example.org/action/delete> <http://example.org/entity/trash.py> }",
+        "question": "Which commits deleted file trash.py?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u2 <http://example.org/action/add> <http://example.org/entity/data/LC-QUAD/train-data.json>. ?u2 <http://example.org/ontology/Calendar_date> ?u1",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u1 <http://example.org/action/add> <http://example.org/entity/data/LC-QUAD/train-data.json> . ?u2 <http://example.org/action/add> ?u3. ?u1 <http://example.org/action/add> ?u3 ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u3 <http://example.org/action/add> <http://example.org/entity/data/LC-QUAD/train-data.json> . ?u1 <http://example.org/action/add> ?u2 ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u3 ?u1 <http://example.org/entity/data/LC-QUAD/train-data.json> . ?u2 ?u1 <http://example.org/entity/data/LC-QUAD/train-data.json> ",
+                "target_var": "?u1"
+            }
+        ],
+        "id": 24,
+        "query": "SELECT ?u1 WHERE {?u2 <http://example.org/action/add> <http://example.org/entity/data/LC-QUAD/train-data.json>. ?u2 <http://example.org/ontology/Calendar_date> ?u1}",
+        "question": "When was file data/LC-QUAD/train-data.json added?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u2 <http://example.org/entity/parent <http://example.org/entity/hash/0c3b4d81a5b086ddbb2c400ef14966125b9d3430> . ?u2 <http://example.org/ontology/Calendar_date> ?u1",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u2 <http://example.org/action/add> ?u1 . ?u2 <http://example.org/action/add> ?u3 ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u1 <http://example.org/action/add> ?u2 . ?u3 <http://example.org/action/add> ?u2 ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u3 <http://example.org/action/add> ?u2 . ?u3 <http://example.org/action/add> <http://example.org/entity/data/LC-QUAD/train-data.json>. ?u3 ?u1 <http://example.org/entity/data/LC-QUAD/train-data.json> ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u1 ?u2 <http://example.org/entity/data/LC-QUAD/train-data.json> . ?u3 <http://example.org/action/add> <http://example.org/entity/data/LC-QUAD/train-data.json>. ?u3 ?u2 <http://example.org/entity/data/LC-QUAD/train-data.json> ",
+                "target_var": "?u1"
+            }
+        ],
+        "id": 25,
+        "query": "SELECT DISTINCT ?u1 WHERE {?u2 <http://example.org/entity/parent <http://example.org/entity/hash/0c3b4d81a5b086ddbb2c400ef14966125b9d3430> . ?u2 <http://example.org/ontology/Calendar_date> ?u1}",
+        "question": "When was the commit preceding commit 0c3b4d81a5b086ddbb2c400ef14966125b9d3430?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u2 <http://example.org/action/delete> ?u1. ?u3 <http://example.org/action/add> ?u1. ?u2 <http://example.org/entity/parents> ?u3",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u1 <http://example.org/action/delete> ?u2 . ?u1 <http://example.org/action/add> ?u2. ?u3 <http://example.org/action/delete> ?u2 ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u1 . ?u3 <http://example.org/action/delete> ?u1. ?u3 <http://example.org/action/add> ?u1 ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u1 <http://example.org/action/delete> ?u3 . ?u1 <http://example.org/action/add> ?u3. ?u1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u2 ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u2 <http://example.org/action/add> ?u1 . ?u2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/commit>. ?u3 <http://example.org/action/add> ?u1 ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u2 <http://example.org/action/add> ?u3 . ?u2 <http://example.org/action/delete> ?u1. ?u2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://example.org/entity/commit> ",
+                "target_var": "?u1"
+            }
+        ],
+        "id": 26,
+        "query": "SELECT DISTINCT ?u1 WHERE {?u2 <http://example.org/action/delete> ?u1. ?u3 <http://example.org/action/add> ?u1. ?u2 <http://example.org/entity/parents> ?u3}",
+        "question": "Which files were deleted in the commit following the commit in which they were added?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u2 <http://example.org/ontology/author> ?u1. ?u2 <http://example.org/action/modify> <http://example.org/entity/killme.py>",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u2 <http://example.org/action/add> ?u3 . ?u2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ?u1. ?u2 <http://example.org/action/delete> ?u3 ",
+                "target_var": "?u1"
+            }
+        ],
+        "id": 27,
+        "query": "SELECT COUNT(DISTINCT ?u1) WHERE {?u2 <http://example.org/ontology/author> ?u1. ?u2 <http://example.org/action/modify> <http://example.org/entity/killme.py>}",
+        "question": "How many users have made commits that changed file killme?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u2 <http://example.org/ontology/author> ?u1. ?u2 <http://example.org/action/modify> <http://example.org/entity/killme.py>",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u2 ?u1 <http://example.org/entity/__pycache__/killme.cpython-310.pyc> . ?u3 ?u1 <http://example.org/entity/commits.txt> ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u1 <http://example.org/action/delete> <http://example.org/entity/commits.txt> . ?u1 ?u3 <http://example.org/entity/__pycache__/killme.cpython-310.pyc>. ?u2 ?u3 <http://example.org/entity/commits.txt> ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u2 ?u3 <http://example.org/entity/killme.py> . ?u2 ?u3 <http://example.org/entity/commits.txt>. ?u2 ?u1 <http://example.org/entity/killme.py> ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u1 ?u3 <http://example.org/entity/__pycache__/killme.cpython-310.pyc> . ?u1 <http://example.org/action/modify> <http://example.org/entity/__pycache__/killme.cpython-310.pyc>. ?u2 ?u3 <http://example.org/entity/killme.py> ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u1 ?u3 <http://example.org/entity/killme.py> . ?u2 ?u3 <http://example.org/entity/__pycache__/killme.cpython-310.pyc> ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u3 <http://example.org/action/delete> ?u1 . ?u3 ?u2 <http://example.org/entity/killme.py>. ?u3 ?u2 <http://example.org/entity/__pycache__/killme.cpython-310.pyc> ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u2 ?u3 <http://example.org/entity/killme.py> . ?u2 ?u1 <http://example.org/entity/__pycache__/killme.cpython-310.pyc>. ?u2 ?u1 <http://example.org/entity/killme.py> ",
+                "target_var": "?u1"
+            }
+        ],
+        "id": 28,
+        "query": "SELECT COUNT(DISTINCT ?u1) WHERE {?u2 <http://example.org/ontology/author> ?u1. ?u2 <http://example.org/action/modify> <http://example.org/entity/killme.py>}",
+        "question": "How many users have made commits that changed file killme?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u1 <http://example.org/action/add> ?u2. ?u1 <http://example.org/action/modify> ?u2",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u3 ?u1 <http://example.org/entity/killme.py> . ?u3 <http://example.org/action/delete> ?u2. ?u3 ?u1 <http://example.org/entity/commits.txt> ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u2 ?u3 <http://example.org/entity/__pycache__/killme.cpython-310.pyc> . ?u1 ?u3 <http://example.org/entity/commits.txt>. ?u2 <http://example.org/action/modify> <http://example.org/entity/killme.py> ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u2 ?u1 <http://example.org/entity/__pycache__/killme.cpython-310.pyc> . ?u3 ?u1 <http://example.org/entity/killme.py>. ?u2 <http://example.org/action/delete> <http://example.org/entity/commits.txt> ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u1 ?u2 <http://example.org/entity/__pycache__/killme.cpython-310.pyc> . ?u1 <http://example.org/action/modify> <http://example.org/entity/killme.py>. ?u1 ?u2 <http://example.org/entity/killme.py> ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u2 <http://example.org/action/modify> ?u3 . ?u2 <http://example.org/action/delete> ?u3. ?u2 <http://example.org/action/modify> <http://example.org/entity/killme.py> ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u2 ?u1 <http://example.org/entity/killme.py> . ?u2 ?u1 <http://example.org/entity/commits.txt>. ?u3 ?u1 <http://example.org/entity/__pycache__/killme.cpython-310.pyc> ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u1 ?u2 <http://example.org/entity/commits.txt> . ?u1 <http://example.org/action/delete> ?u3. ?u1 <http://example.org/action/delete> <http://example.org/entity/commits.txt> ",
+                "target_var": "?u1"
+            }
+        ],
+        "id": 29,
+        "query": "SELECT DISTINCT ?u1 WHERE {?u1 <http://example.org/action/add> ?u2. ?u1 <http://example.org/action/modify> ?u2}",
+        "question": "Which commits had both added and modified files?"
+    },
+    {
+        "answer": "correct",
+        "features": [
+            "list",
+            "multivar"
+        ],
+        "generated_queries": [
+            {
+                "correct": true,
+                "query": "?u2 <http://example.org/ontology/author> ?u1",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u1 <http://example.org/ontology/author> ?u2 . ?u1 <http://example.org/ontology/author> ?u3 ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u3 ?u1 ?u2 . ?u3 <http://example.org/ontology/author> ?u2 ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u1 <http://example.org/ontology/author> ?u2 . ?u1 <http://example.org/ontology/author> ?u3 ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u3 <http://example.org/ontology/author> ?u1 . ?u3 <http://example.org/ontology/author> ?u2 ",
+                "target_var": "?u1"
+            },
+            {
+                "correct": false,
+                "query": "?u3 <http://example.org/ontology/author> ?u1 . ?u3 <http://example.org/ontology/author> ?u2 ",
+                "target_var": "?u1"
+            }
+        ],
+        "id": 30,
+        "query": "SELECT DISTINCT ?u1 WHERE {?u2 <http://example.org/ontology/author> ?u1}",
+        "question": "List all the authors?"
+    }
+]

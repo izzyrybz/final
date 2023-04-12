@@ -53,7 +53,7 @@ def info_between_elements(lst, A, B):
     ############################################ PROCESS THE INFORMATION FROM THE LOGFILE ###################################3
 
 def process_logfile(path):
-    commit = {"commit_ref": "", "author": "", "description": "" ,"date":"" ,"changed_files": [], "parents" :""} #, "branches":""
+    commit = {"commit_ref": "", "author": "", "description": "" ,"date":"" ,"changed_files": [], "parents" :[]} #, "branches":""
     history = []
     date_format = "%a %b %d %H:%M:%S %Y %z"
     with open(path,'r') as f:
@@ -62,25 +62,35 @@ def process_logfile(path):
         for line in f:
             line = line.strip()
             line = line.split(',')
+            parents_array=[]
             if line == ['']:
                 continue
             #print(line)
             for index, element in enumerate(line):
-                print(index,element)
+                #print(index,element)
                 if ('commit:' in element):
                     #print(element)
                     hash = element[element.index(":") + 1:]
                     commit["commit_ref"]  = hash
-                if('Author:' in element): 
+                elif('Author:' in element): 
                     #print("adding person",line[index+1])
                     name = element[element.index(":") + 1:].strip()
+                    name = name.replace(' ','_')
                     commit["author"] = name
-                if('Description:' in element): 
+                    print(name)
+                    '''if '@' in name:
+                        name = name.split("@")[0]
+                        commit["author"] = name
+                    else:
+                        print("we have commit without valid username")
+                        commit["author"] = "invalid_username"'''
+                    
+                elif('Description:' in element): 
                     #print("adding person",line[index+1])
                     description = element[element.index(":") + 1:].strip()
                     commit["description"] = description
 
-                if('Date:' in element):
+                elif('Date:' in element):
                     date = element[element.index(":") + 1:]
                     #print(date)
                     date_obj = datetime.strptime(date, date_format)
@@ -91,39 +101,57 @@ def process_logfile(path):
 
                 #Possible to add branch info here
 
-                if('Parents:' in element): 
-                    #print(element[element.index(":") + 1:].strip())
+                elif('Parents:' in element): 
+                    
+                    parents = element[element.index(":") + 1:].strip().split()
+                    commit.setdefault("parents", []).extend(parents)
+                    
+                    '''print(element[element.index(":") + 1:].strip())
                     parents = element[element.index(":") + 1:].strip()
-                    commit["parents"] = parents
+                    
+                    parents= parents.split(' ')
+                    
+                    for parent in parents:
+                        #parents_array.append(parents)
+                        commit["parents"].add(parent)'''
                 
-                if('Lines:' in element): 
+                elif('Lines:' in element): 
                     #print(element[element.index(":") + 1:].strip())
                     parents = element[element.index(":") + 1:].strip()
                     commit["parents"] = parents
 
-                if ('M' in element or 'D' in element or ' A ' in element or 'R100' in element):
-                     
+                #if ('M' in element or 'D' in element or ' A ' in element or 'R100' in element and not ':' in element):
+                elif ('M' in element or 'D' in element or ' A ' in element or 'R100' in element):
+                    
                     element = element.split()
-                    if(element[1] == 'R100'):
-                        files_and_action= [element[1],element[2],element[3]]
+                    element = [x for x in element if x != '|']
+                    print("this is the problem", element)
+                    
+                    if(element[0] == 'R100'):
+                        files_and_action= [element[0],element[1],element[2]]
                         commit["changed_files"].append(files_and_action)
                     
-                    if(Path(element[2]).suffix):
+                    if(Path(element[1]).suffix):
                         #print(element[2])
-                        file_and_action = [element[1],element[2]]
+                        file_and_action = [element[0],element[1].strip("'","")]
                         #commit["changed_files"] = file_and_action
                         commit["changed_files"].append(file_and_action)
+                
+
                     
-                if('*' in element):
+                elif('*' in element):
                     #print("now we are saving and")
                     #print("this is a ",commit)
                     if(first_star):
                         first_star=False
                         continue
                     else:
+                        parents_array=[]
+                        print(commit)
                         history.append(commit)
                         commit = copy.deepcopy(commit)
                         commit["changed_files"]=[]
+                        commit["parents"]=[]
                     
                
     #print(history)
@@ -137,12 +165,12 @@ def process_logfile(path):
     ############################################ TO CREATE THE RDF TRIPPLES #############################################
     print("past the generation of the history")
     #commits = URIRef("http://dbpedia.org/resource/Commit_(version_control)")
-    commits = URIRef("http://example.org/entity/commit")
+    Commits = URIRef("http://example.org/entity/commit")
+    Commits_hash = URIRef("http://example.org/entity/hash/")
 
-
-    Author = URIRef("http://dbpedia.org/ontology/author")
-    Description = URIRef("http://dbpedia.org/ontology/description")
-    Calendar_date = URIRef("http://dbpedia.org/ontology/Calendar_date")
+    Author = URIRef("http://example.org/ontology/author")
+    Description = URIRef("http://example.org/ontology/description")
+    Calendar_date = URIRef("http://example.org/ontology/Calendar_date")
     Entity = URIRef("http://example.org/entity/")
 
     #I am not sure if these are correct but we are working with it
@@ -159,15 +187,18 @@ def process_logfile(path):
     g = Graph()
 
     for commit in history:
-        urirefstring = "http://example.org/"+ commit['commit_ref']
+        urirefstring = Commits_hash+ commit['commit_ref']
         urirefstring= urirefstring.replace(" ", "")
         commit_uri = URIRef(urirefstring)
-        g.add((commit_uri, RDF.type, commits))
+        g.add((commit_uri, RDF.type, Commits_hash))
         g.add((commit_uri, Author, Entity+commit['author']))
         #g.add((commit_uri, Description, Literal(commit['description'])))
         print(commit['date'])
         g.add((commit_uri, Calendar_date, Literal(commit['date'], datatype=XSD.dateTime)))
-        g.add((commit_uri, Parent,Entity+commit['parents'] ))
+
+        '''for parent in commit['parents']:
+            print(parent)
+            g.add((commit_uri, Parent,Entity+parent ))'''
         #if it has been renamed, there is two files
         for array in commit["changed_files"]:
             if len(array) == 2:
@@ -193,7 +224,7 @@ def process_logfile(path):
 
 
     # To save the graph to a file
-    g.serialize(destination='commit_history_turtle.ttl', format='turtle')
+    g.serialize(destination='commit_history_turtle_teammate_repo.ttl', format='turtle')
 
 
 

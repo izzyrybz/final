@@ -31,18 +31,7 @@
         "query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/property/leaderName> <http://dbpedia.org/resource/Justin_Trudeau> . ?uri <http://dbpedia.org/ontology/majorShrine> ?x  . }",
         "question": "Whose shrines are in a place governed by Justin Trudeau?"
     },
-    {
-        "answer": "-no_answer",
-        "features": [
-            "compound",
-            "singlevar"
-        ],
-        "generated_queries": [],
-        "id": "3419",
-        "query": "SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/property/voices> <http://dbpedia.org/resource/Eliza_Schneider> . ?uri <http://dbpedia.org/property/voices> <http://dbpedia.org/resource/Isaac_Hayes> . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/TelevisionShow>}",
-        "question": "What is a commmit?"
-    },
-    {
+        {
         "answer": "correct",
         "features": [
             "multivar",
